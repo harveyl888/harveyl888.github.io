@@ -1,7 +1,7 @@
 # Site navigation links
 - title: Posts
-  url: /longposts/
-  excerpt: "Long Posts"
+  url: /blog/
+  excerpt: "Blog Posts"
   image: blogpost.jpg
 
 - title: Codes
