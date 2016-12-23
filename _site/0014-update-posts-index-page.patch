@@ -1,0 +1,62 @@
+From fbbb082f647ad9a6bec4e0665a068045478d23ec Mon Sep 17 00:00:00 2001
+From: "harvey.lieberman" <harvey.lieberman@gmail.com>
+Date: Wed, 21 Dec 2016 16:19:17 -0500
+Subject: [PATCH 14/16] update posts index page
+
+---
+ _posts/blog/2016-11-23-why-blog.md     |  2 +-
+ _posts/blog/2016-11-24-black-friday.md |  2 +-
+ blog/index.md                          | 11 ++++++++---
+ 3 files changed, 10 insertions(+), 5 deletions(-)
+
+diff --git a/_posts/blog/2016-11-23-why-blog.md b/_posts/blog/2016-11-23-why-blog.md
+index 2e68a6f..903be40 100644
+--- a/_posts/blog/2016-11-23-why-blog.md
++++ b/_posts/blog/2016-11-23-why-blog.md
+@@ -1,7 +1,7 @@
+ ---
+ layout: article
+ title: "Why blog?  Why now?"
+-excerpt: "Why blog?  Why now?  Why here?"
++excerpt: "Why am I starting to blog now?"
+ categories: blog
+ created: 2016-11-23
+ modified: 2016-12-10
+diff --git a/_posts/blog/2016-11-24-black-friday.md b/_posts/blog/2016-11-24-black-friday.md
+index 1d154b2..e5166ce 100644
+--- a/_posts/blog/2016-11-24-black-friday.md
++++ b/_posts/blog/2016-11-24-black-friday.md
+@@ -1,7 +1,7 @@
+ ---
+ layout: article
+ title: "Scraping for Dishwashers"
+-excerpt: "Scraping for Dishwashers"
++excerpt: "Scraping Home Depot to gather dishwasher information (using rvest)"
+ categories: blog
+ created: 2016-11-24
+ modified: 2016-12-14
+diff --git a/blog/index.md b/blog/index.md
+index 9adb16b..5aba553 100644
+--- a/blog/index.md
++++ b/blog/index.md
+@@ -5,8 +5,13 @@ date: 2016-11-23
+ excerpt: "Some short, some long"
+ ---
+ 
+-<div class="tiles">
+ {% for post in site.categories.blog %}
+-  {% include post-grid.html %}
++<div class="row">
++  <img src="/images/blogpost.jpg" alt="" style="width:200px;height:125px; display: inline-block;">
++  <div style="display: inline-block;">
++    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
++		<a href="{{ post.url }}"><h3 style="margin: 0px;">{{ post.title }}</h3></a>
++	  {{ post.excerpt }}
++  </div>
++</div>
+ {% endfor %}
+-</div><!-- /.tiles -->
+\ No newline at end of file
+-- 
+1.9.1
+
