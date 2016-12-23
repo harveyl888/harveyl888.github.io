@@ -30,8 +30,9 @@ titlecase: true
 
 # Site owner
 owner:
-  name:
-  email:
+  name: Harvey Lieberman
+  web: http://harveyl888.github.io
+  email: harvey.lieberman@gmail.com
   twitter:
   google:
     ad-client:
