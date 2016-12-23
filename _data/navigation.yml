@@ -1,6 +1,10 @@
 # Site navigation links
-
-- title:
-  url:
-  excerpt:
-  image:
+- title: Posts
+  url: /longposts/
+  excerpt: "Long Posts"
+  image: blogpost.jpg
+  
+- title: About
+  url: /about/
+  excerpt: "About me"
+  image: sections/about.png
