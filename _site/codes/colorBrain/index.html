@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>About Me • Harvey Lieberman</title>
-    
-    
+    <title>colorBrain • Harvey Lieberman</title>
+    <meta name="description" content="colorBrain R code">
+    <meta name="keywords" content="">
     
     	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="About Me">
-	
+	<meta name="twitter:title" content="colorBrain">
+	<meta name="twitter:description" content="colorBrain R code">
 	
 	
 	
@@ -18,12 +18,12 @@
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="About Me">
-	
-	<meta property="og:url" content="/about/">
+	<meta property="og:title" content="colorBrain">
+	<meta property="og:description" content="colorBrain R code">
+	<meta property="og:url" content="/codes/colorBrain/">
 	<meta property="og:site_name" content="Harvey Lieberman">
 
-    <link rel="canonical" href="/about/">
+    <link rel="canonical" href="/codes/colorBrain/">
 
     <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Harvey Lieberman Atom Feed">
     <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
@@ -101,24 +101,43 @@
 	<article class="wrap" itemscope itemtype="http://schema.org/Article">
 		
 		
+  <nav class="breadcrumbs">
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="" itemprop="url">
+        <span itemprop="title">Home</span>
+      </a> › 
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="/codes/" itemprop="url">
+        <span itemprop="title">Codes</span>
+      </a>
+    </span>
+  </nav><!-- /.breadcrumbs -->
+
 		<div class="page-title">
-			<h1>About Me</h1>
+			<h1>colorBrain</h1>
 		</div>
 		<div class="inner-wrap">
 			<div id="content" class="page-content" itemprop="articleBody">
-				<h2 id="a-little-about-me">A little about me…</h2>
-
-<p>I’m originally from England, now living in the U.S.  My passions are science and technology and the blurry interface between them.</p>
-
-<p>I’m currenty working as an analytical chemist at Sanofi, a pharmaceutical company.  The work I do focuses on metabolomics/lipidomics - the study of small molecules and lipids involved in cellular processes.  Some time is spent in the lab but most is spent on data science and developing new methods to analyze data and automate the processing.</p>
-
-<p>Although I’ve always worked in the sciences, I’ve been programming for about 35 years and have experience in more than 20 languages and most operating systems, including several of the extinct ones!</p>
+				<p>colorBrain is a proof-of-concept code.  It arose from a conversation with a colleague at 5:00 pm on a Friday and was implemented within 2 hours.  The conversation went along the lines of “We generally represent biological data using barcharts with error bars but this is not always the best way to illustrate the information.  Is there a better way?”  I thought about this for a while and decided to write some code using R to map biological response using geomapping - afterall if we can represent our system by a segmented graphic, we can use a simple GIS (geographic information system) to display the data.  This was my first foray into geomapping.<br />
+In the example on github dummy data were used to color-code parts of a brain.  The image was sketched with polygons using <a href="http://www.qgis.org/en/site/">qgis</a> and saved as a shapefile.  The maptools package was used within R to project the data onto the image.<br />
+The cool thing about this was that I could use R in conjunction with Shiny to create a working app quickly.  From initial conception of the idea to a working app took less than 2 hours.  I like to think of this as rapid prototyping for programming.<br />
+<a href="https://github.com/harveyl888/colorBrain">colorBrain</a></p>
 
 				<hr />
 				<footer class="page-footer">
 					
+
+<div class="author-image">
+	<img src="/images/bio-photo.jpg" alt="Harvey Lieberman">
+</div><!-- ./author-image -->
+<div class="author-content">
+	<h3 class="author-name" >Written by <span itemprop="author">Harvey Lieberman</span></h3>
+	<p class="author-bio"></p>
+</div><!-- ./author-content -->
 					
-					
+					<div class="page-meta">
+	<p>Updated <time datetime="2016-11-24T00:00:00Z" itemprop="dateModified">November 24, 2016</time>
+</div><!-- /.page-meta -->
 				</footer><!-- /.footer -->
 				<aside>
 					
