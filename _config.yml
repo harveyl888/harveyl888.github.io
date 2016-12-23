@@ -1,7 +1,7 @@
 # Site wide configuration
 
 title: "Harvey Lieberman"
-description: "Musings of a Science-based Data Scientist"
+description: "Musings of a Pharmaceutical Data Scientist"
 logo: # 120x120 px default image used for Twitter summary card
 teaser: blogpost.jpg # 400x250 px default teaser image used in image archive grid
 locale: en
