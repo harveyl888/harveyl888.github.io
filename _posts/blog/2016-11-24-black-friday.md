@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Scraping for Dishwashers"
-excerpt: "Scraping for Dishwashers"
+excerpt: "Scraping Home Depot to gather dishwasher information (using rvest)"
 categories: blog
 created: 2016-11-24
 modified: 2016-12-14
