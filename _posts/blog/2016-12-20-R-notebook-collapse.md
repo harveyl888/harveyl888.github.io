@@ -32,4 +32,4 @@ as.htmlwidget(formattable(iris,
 HTML('</div>')
 ```
 
-![R Notebook collapsible](/images/post-images/r-notebook-collapse.png){:class="img-responsive"}
+![R Notebook collapsible](/images/post-images/2016-12-20-R-notebook-collapse/r-notebook-collapse.png){:class="img-responsive"}
