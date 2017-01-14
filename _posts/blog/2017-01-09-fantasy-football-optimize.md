@@ -86,13 +86,13 @@ lapply(seq_along(l.plot), function(x)
 In the plots below the red dots represent predicted points for new players based on cost alone.
 
 <figure class="half">
-	<img src="/temp/images/pred_GLK.jpg">
-	<img src="/temp/images/pred_DEF.jpg">
+	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/pred_GLK.jpg">
+	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/pred_DEF.jpg">
 </figure>
 
 <figure class="half">
-	<img src="/temp/images/pred_MID.jpg">
-	<img src="/temp/images/pred_FWD.jpg">
+	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/pred_MID.jpg">
+	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/pred_FWD.jpg">
 </figure>
 
 Now we have cost and points assigned to each player we can build out linear solver.  First we define some constraints.  In the fantasy Premierleague game, a squad comprises of 15 players (2 goalkeepers, 5 defenders, 5 midfielders and 3 forwards).  The total cost of the squad cannot exceed &pound;100M.  These constraints are defined below.
@@ -187,7 +187,7 @@ plot(sapply(l.out, function(x) sum(x$newPoints)))
 
 This generates 100 teams.  The predicted scores will generally increase over time due to the fact that we're starting from an optimized team each time.
 
-![](/temp/images/pred_team_scores.jpg)
+![](/images/post-images/2017-01-09-fantasy-football-optimize/pred_team_scores.jpg)
 
 I put this together for my son and he went through the teams, selecting one that appealed to him?  We're around 1/2 way through the season now - how is he doing?
 
@@ -232,6 +232,6 @@ ggplot(df.teamleague, aes(x=week, y=rank, group=team)) +
 He's doing pretty good!  His team is team #1 in the graphs below.  At week 8 he took the lead and has manage to hold it.  We're at week 20 so we'll see how the rest of the season goes.  As the season goes on he's learning more about players but is still at a disadvantage compared to other managers in terms of Premiership knowledge.  Next season we'll work changing the team thoughout the season.  
 
 <figure class="half">
-	<img src="/temp/images/cumulative_points.jpg">
-	<img src="/temp/images/league_position.jpg">
+	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/cumulative_points.jpg">
+	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/league_position.jpg">
 </figure>
