@@ -12,7 +12,7 @@ ads: false
 A common task when working with data is split-apply-combine – splitting a dataset up, applying a function and then recombining the results.  It’s often performed in creating summary tables around a factor.  
 
 First let’s define the data to be used.
-I'm interested in a scenario where I have **nS** samples at **nC** concentrations repeated **nR** times.  For each of these I'd like nF pieces of data (features).  The table to construct will have **nS.nC.nR** rows and **nF** columns of data.
+I'm interested in a scenario where I have **nS** samples at **nC** concentrations repeated **nR** times.  For each of these I'd like **nF** pieces of data (features).  The table to construct will have **nS.nC.nR** rows and **nF** columns of data.
 
 ```r
 library(data.table)
