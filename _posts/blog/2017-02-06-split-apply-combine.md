@@ -38,7 +38,7 @@ df <- as.data.frame(dt)
 ```
 The top of the table is shown below.
 
-![](/temp/images/split-apply-combine.png)
+![split-apply-combine](/images/post-images/2017-02-06-split-apply-combine/split-apply-combine.png)
 
 Table dimensions = 400 x 52.
 
