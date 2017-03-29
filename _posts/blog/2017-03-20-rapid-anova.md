@@ -60,4 +60,4 @@ expr | min | lq | mean | median | uq | max | nval
 multAnova1(df.raw, groups) | 17467.11 | 17609.23 | 18085.73 | 17882.93 | 18203.27 | 19628.12 | 10
 multAnova2(df.raw, groups) | 13.89 | 14.25 | 15.66 | 15.68 | 16.31 | 18.72 | 10
 
-![](/temp/images/RapidAnova.png)
+![](/images/post-images/2017-03-20-rapid-anova/RapidAnova.png)
