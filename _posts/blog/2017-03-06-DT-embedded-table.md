@@ -10,7 +10,7 @@ ads: false
 ---
 
 Here’s an example of how to embed subtables in a datatable.  It’s an enhancement of the child rows example found at 
-https://rstudio.github.io/DT/002-rowdetails.html and works by storing JSON versions of subtables as a column in the main table dataframe. 
+[https://rstudio.github.io/DT/002-rowdetails.html](https://rstudio.github.io/DT/002-rowdetails.html) and works by storing JSON versions of subtables as a column in the main table dataframe. 
 The current release of the DT library converts the JSON format into a javascript array which can simply be rendered to an HTML table 
 (DT version 1.x returned a JSON string which must be converted using JSON.parse).
 
