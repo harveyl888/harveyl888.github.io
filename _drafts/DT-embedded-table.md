@@ -14,6 +14,8 @@ https://rstudio.github.io/DT/002-rowdetails.html and works by storing JSON versi
 The current release of the DT library converts the JSON format into a javascript array which can simply be rendered to an HTML table 
 (DT version 1.x returned a JSON string which must be converted using JSON.parse).
 
+![](/temp/images/embed-table.gif)
+
 ```r
 ##
 ## EmbeddedTable
