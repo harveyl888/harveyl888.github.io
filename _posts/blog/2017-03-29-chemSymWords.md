@@ -35,6 +35,6 @@ chemWordRecurse <- function(w, t, sym=elements) {
 
 An old stackexchange thread ([http://puzzling.stackexchange.com/questions/5456/the-longest-word-made-from-chemical-symbols](http://puzzling.stackexchange.com/questions/5456/the-longest-word-made-from-chemical-symbols)) challenges the longest word which can be made out of chemical symbols.  At the time of this writing it's Floccinaucinihilipilifications at 30 letters.
 
-![](/temp/images/Floccinaucinihilipilifications.png)
+![](/images/post-images/2017-03-29-chemSymWords/Floccinaucinihilipilifications.png)
 
 The code can be found at [https://github.com/harveyl888/chemSymWords](https://github.com/harveyl888/chemSymWords)
