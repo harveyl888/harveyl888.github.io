@@ -7,6 +7,6 @@ excerpt: "Code Examples"
 
 <div class="tiles">
 {% for post in site.categories.codes %}
-  {% include post-grid.html %}
+  {% include codes-grid.html %}
 {% endfor %}
 </div><!-- /.tiles -->
