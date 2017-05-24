@@ -3,7 +3,7 @@ layout: article
 title: "Shiny Background Process"
 excerpt: "Running a background process under Shiny"
 categories: blog
-created: 2017-03-30
+created: 2017-04-08
 comments: false
 share: false
 ads: false
