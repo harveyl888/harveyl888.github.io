@@ -16,7 +16,7 @@ The dataset used is the spinach dataset that comes with the drc package.  It's a
 
 ## Code
 
-```{r}
+```r
 
 ## Libraries
 library(drc)
