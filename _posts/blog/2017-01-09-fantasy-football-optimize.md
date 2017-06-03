@@ -235,3 +235,17 @@ He's doing pretty good!  His team is team #1 in the graphs below.  At week 8 he 
 	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/cumulative_points.jpg">
 	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/league_position.jpg">
 </figure>
+
+## Update (May 22, 2017)
+Oh so close!  Jake led up to the penultimate week and was then caught.
+
+<figure class="half">
+	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/cumulative_points_38.jpg">
+	<img src="/images/post-images/2017-01-09-fantasy-football-optimize/league_position_38.jpg">
+</figure>
+
+
+
+
+
+
