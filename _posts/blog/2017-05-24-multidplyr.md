@@ -93,4 +93,4 @@ In this case, multidplyr runs up to 4.3 times faster on a 16 core PC.  The speed
 | 5000 | 212.89       |  49.29            |
 
 
-![](/temp/images/multidplyr.png)
+![](/images/post-images/2017-05-24-multidplyr/multidplyr.png)
