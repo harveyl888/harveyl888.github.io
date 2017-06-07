@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "parralel dplyr"
+title: "parallel dplyr"
 excerpt: "Multidplyr - A parallel version of dplyr"
 categories: blog
 created: 2017-05-24
