@@ -83,7 +83,7 @@ df.table <- df.graph %>%
 
 ## Conclusion
 
-In this case, multidplyr runs up to 4.3 times faster on a 16 core PC.  The speed enchancement appears to be linear with respect to increasing size of the dataset.
+In this case, multidplyr runs up to 4.3 times faster on a 16 core PC.  The speed enchancement increases with increasing size of the dataset.
 
 
 |  n   | dplyr (secs) | multidplyr (secs) |
