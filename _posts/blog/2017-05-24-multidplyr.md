@@ -12,7 +12,7 @@ ads: false
 ## Introduction
 I’m a big fan of the R packages in the tidyverse and dplyr in particular for performing routine data analysis.  I'm currently working on a project that requires fitting dose-repsonse curves to data.  All works well when the amount of data is small but as the dataset grows so does the computational time.  Fortunately there’s a library (multidplyr) to perform dplyr operations under parallel conditions.  By way of example we’ll create a set of dummy data and compare curve fitting using dplyr and multidplyr.
 
-The dataset used is the spinach dataset that comes with the drc package.  It's a data frame containing 105 observations in 5 groups.  Each group consists of 7  concentrations run in triplicate.  To compare dplyr and multidplyr we'll take these measurements and copy them 1000 times with some jitter.  This leads to a data frame containing 5005 individual curves, each with 21 data points.  The two libraries are compared by curve-fitting to 10, 100, 1000 and 5000 curves. 
+The dataset used is the spinach dataset that comes with the drc package.  It's a data frame containing 105 observations in 5 groups.  Each group consists of 7  concentrations run in triplicate.  To compare dplyr and multidplyr we'll take these measurements and copy them 1000 times with some jitter.
 
 ## Code
 
