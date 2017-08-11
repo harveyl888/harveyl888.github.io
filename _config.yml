@@ -5,9 +5,10 @@ description: "Musings of a Pharmaceutical Data Scientist"
 logo: # 120x120 px default image used for Twitter summary card
 teaser: blogpost.jpg # 400x250 px default teaser image used in image archive grid
 locale: en
-url:
+url: 
 feed:
   path: atom.xml
+
 
 # Jekyll configuration
 
@@ -18,10 +19,11 @@ permalink: /:categories/:title/
 kramdown:
   toc_levels: 1..2
 highlighter: rouge
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
+
+future: true
 
 post_layout: article
 page_layout: article
