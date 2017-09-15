@@ -12,7 +12,7 @@ ads: false
 Using RMarkdown with knitr is a great way of automating reports under R and I've used this approach extensively in shiny apps.  For one particular project we're storing raw data in a SQL database and processing on the fly under shiny.  Results are displayed using heatmaps and graphs.  We're now considering pushing data reports to a filestore that connects to another corporate database via a visualizer.  Not wanting to generate extra work, this is a great opportunity to put rmarkdown and knitr to work.  I've added some code to the upload so that each time data are uploaded to the database some rudimentary calculations are performed and a pdf report is automatically generated.  Unlike many of the other reports I've put together in the past, this one requires the title to be placed in a header along with a link to the app for further processing.  
 All this can be achieved with a little programming in R and latex as shown below...
 
-![](/images/assay_upload.png)
+![](/images/post-images/2017-09-15-fancy_headers_in_automated_reports/assay_upload.png)
 
 Here is a snippet from the app.R code.  In this case `ASSAY_TITLE` refers to the name of the assay.  Data have already been processed and are stored in a reactive variable (df.raw), comprising of Sample, Concentration and several columns of processed data.
 
