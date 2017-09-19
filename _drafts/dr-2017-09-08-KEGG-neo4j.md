@@ -48,14 +48,14 @@ This method is successful, however the records do not contain information about 
 The xml files contain data on the nodes (compounds / enzymes) and relationships (reactions).  They also include the reaction direction (reversible or irreversible).  Once read and parsed, the reaction information can be used to populate the database (cross-referencing to information in additional tables).
 Upon inspection, however, its apparent that the xml files are missing some connectivity information.  Indeed, the files have been constructed to aid in visual interpretation of the data which leads to redundancy and missing information.
 
-Mapping Reactions          |  Mapping Connections
+Mapping Connections        |  Mapping Reactions
 :-------------------------:|:-------------------------:
 ![](/images/draft-images/map00760-xml-connections.png)  |  ![](/images/draft-images/map00760-xml-reactions.png)
 
 ### construct from reaction and file
 Cross-referencing the reaction file with the compound, rclass and enzyme files provides the richest information.  Two types of relationships can be constructed here - each individual reaction (multiple connections between each pair of compounds) as well as single points of connection between each pair (equivalent to rclass).  This highlights the ability of neo4j to store multiple types of relationship between nodes.
 
-Mapping Reactions          |  Mapping Connections
+Mapping Connections        |  Mapping Reactions
 :-------------------------:|:-------------------------:
 ![](/images/draft-images/map00760-reaction-connections.png)  |  ![](/images/draft-images/map00760-reaction-reactions.png)
 
