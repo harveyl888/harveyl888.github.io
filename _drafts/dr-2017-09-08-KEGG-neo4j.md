@@ -13,10 +13,10 @@ The KEGG (Kyoto Encyclopedia of Genes and Genomes) database is a useful referenc
 
 Of the KEGG tables, the following are most of interest:
 
-  -  reaction: Information on individual reactions (id tag(entry), reaction name, definition of reaction, equation, list of rclass, pathways on which it can be found, enzyme involved in reaction)
-  -  rclass: Information on different reaction classes (id tag (entry), definition of reaction class, pathways on which it can be found,  series of pairs of compounds which undergo the reaction (substrate and product pairs), reactions in which this reaction class can be found)
-  -  compound: Information on compounds (id tag (entry), name, formula, accurate mass, pathways on which it can be found)
-  -  enzyme: Information on enzymes (id tag (entry), name, reaction in which its involved, substrate and product information, pathways on which it can be found)
+  -  <span style="font-size:larger;">reaction:</span> Information on individual reactions (id tag(entry), reaction name, definition of reaction, equation, list of rclass, pathways on which it can be found, enzyme involved in reaction)
+  -  <span style="font-size:larger;">rclass:</span> Information on different reaction classes (id tag (entry), definition of reaction class, pathways on which it can be found,  series of pairs of compounds which undergo the reaction (substrate and product pairs), reactions in which this reaction class can be found)
+  -  <span style="font-size:larger;">compound:</span> Information on compounds (id tag (entry), name, formula, accurate mass, pathways on which it can be found)
+  -  <span style="font-size:larger;">enzyme:</span> Information on enzymes (id tag (entry), name, reaction in which its involved, substrate and product information, pathways on which it can be found)
   
 The xml files contain three types of element, namely *entry* (compounds and enzymes), *relation* (connections between entries) and *reaction^ (information on reactions between substrates/products).
 
@@ -48,8 +48,16 @@ This method is successful, however the records do not contain information about 
 The xml files contain data on the nodes (compounds / enzymes) and relationships (reactions).  They also include the reaction direction (reversible or irreversible).  Once read and parsed, the reaction information can be used to populate the database (cross-referencing to information in additional tables).
 Upon inspection, however, its apparent that the xml files are missing some connectivity information.  Indeed, the files have been constructed to aid in visual interpretation of the data which leads to redundancy and missing information.
 
+Mapping Reactions          |  Mapping Connections
+:-------------------------:|:-------------------------:
+![](/images/draft-images/map00760-xml-connections.png)  |  ![](/images/draft-images/map00760-xml-reactions.png)
+
 ### construct from reaction and file
 Cross-referencing the reaction file with the compound, rclass and enzyme files provides the richest information.  Two types of relationships can be constructed here - each individual reaction (multiple connections between each pair of compounds) as well as single points of connection between each pair (equivalent to rclass).  This highlights the ability of neo4j to store multiple types of relationship between nodes.
+
+Mapping Reactions          |  Mapping Connections
+:-------------------------:|:-------------------------:
+![](/images/draft-images/map00760-reaction-connections.png)  |  ![](/images/draft-images/map00760-reaction-reactions.png)
 
 
 The code can be found at [https://github.com/harveyl888/neo4jKEGG](https://github.com/harveyl888/neo4jKEGG)
