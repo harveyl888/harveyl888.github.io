@@ -47,7 +47,7 @@ p1 <- plot_ly(df2, x = ~sample, y = ~avg, color = ~group, type = 'bar', error_y 
 p1
 ```
 
-![](/images/draft-images/plotly_01.png)
+![](/images/post-images/2017-10-26-plotly-error-bars/plotly_01.png)
 
 ```r
 ## Create individual columns for group data and errors
@@ -65,4 +65,4 @@ for (g in unique(df2$group)) {
 p2
 ```
 
-![](/images/draft-images/plotly_02.png)
+![](/images/post-images/2017-10-26-plotly-error-bars/plotly_02.png)
