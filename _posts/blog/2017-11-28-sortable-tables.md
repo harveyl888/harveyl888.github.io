@@ -70,4 +70,4 @@ shinyApp(ui = ui, server = server)
 
 ```
 
-![](/images/post-images/sortable_table.gif)
+![](/images/post-images/2017-11-28-sortable-table/sortable_table.gif)
