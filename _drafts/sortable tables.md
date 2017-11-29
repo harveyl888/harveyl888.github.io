@@ -69,3 +69,5 @@ ui <- fluidPage(
 shinyApp(ui = ui, server = server)
 
 ```
+
+![](/images/post-images/sortable_table.gif)
