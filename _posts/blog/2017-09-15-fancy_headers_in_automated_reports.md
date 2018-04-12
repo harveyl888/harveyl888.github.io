@@ -46,7 +46,7 @@ Once this is all in place, all that is needed is to issue a `\newpage` followed 
     params: 
       sample: ""
       date: ""
-    title: "ELOVL1 FATTY ACID"
+    title: "FATTY ACID ANALYSIS"
     author: "`r paste0('Sample: ', params$sample, ' --- Uploaded: ', params$date)`"
     header-includes:
       \usepackage{graphicx}
