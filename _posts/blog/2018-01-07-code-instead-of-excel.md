@@ -14,7 +14,7 @@ There are many reasons why data analysis should be performed using a language su
 Here are five reasons to stop using Excel:
 
 #### Reproducibility
-It's very challenging to use what's been done before with a spreadsheet.  You can make additional copies of a workbook but sooner or later the file naming convention is forgotten and you have no idea what you were working on a year ago.It
+It's very challenging to use what's been done before with a spreadsheet.  You can make additional copies of a workbook but sooner or later the file naming convention is forgotten and you have no idea what you were working on a year ago.
 
 #### Version Control
 I've started applying git to all kids of work, not just programming.  From a coding perspective if I can't keep a detailed log of what I've done and branch to try new things I'm lost.  Excel 2016 does seem to have some version control through the History pane but since I use Office 2010 at work it's a moot point.  Version control is essential when you're working with anything that might break.
