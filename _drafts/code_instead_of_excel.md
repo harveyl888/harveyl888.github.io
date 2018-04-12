@@ -11,13 +11,13 @@ ads: false
 
 There are many reasons why data analysis should be performed using a language such as R or python over Excel but I'm constantly fighting with colleagues who refuse to adapt.
 
-Here are my top five reasons to stop using Excel:
+Here are five reasons to stop using Excel:
 
 #### Reproducibility
 It's very challenging to use what's been done before with a spreadsheet.  You can make additional copies of a workbook but sooner or later the file naming convention is forgotten and you have no idea what you were working on a year ago.It
 
 #### Version Control
-I've started applying git to all kids of work, not just programming.  From a coding perspective if I can't keep a detailed log of what I've done and branch to try new things I'm lost.  Excel 2016 does seem to have some version control through the History pane but since we use Office 2010 it's a moot point.  Version control is essential when you're working with anything that might break.I
+I've started applying git to all kids of work, not just programming.  From a coding perspective if I can't keep a detailed log of what I've done and branch to try new things I'm lost.  Excel 2016 does seem to have some version control through the History pane but since I use Office 2010 at work it's a moot point.  Version control is essential when you're working with anything that might break.
 
 #### Testing
 Without built-in tests how can you be sure youre analyses are correct?  All too often we find systematic mistakes in spreadsheets.  This generally arises from a cut-and-paste operation to an incorrect cell, mixing relative and absolute cell references or not updating a formula from a older spreadsheet version.  Breaking a problem into chunks, programming the chunks as functions and running unit tests on those functions will help eradicate any bugs.
@@ -27,7 +27,7 @@ A few favorite examples
 -  One in five papers published genetics papers from 2005-2015 (3600 papers, 18 journals) contain errors due to Excel autoformatting [Genome Biology, 2016, 17, 177](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7)
 
 #### Maintainability
-Changing from two repeat samples to three in Excel requires adding additional columns and reapplying formulae.  This is much more amenable in a programming paradigm where formulae can be much more flexible and account for future changes.
+I work in Analytial Chemistry and often deal with assay data - essentially a block of data which could be summarized as *s* samples each run *r* times against *f* features.  Changing *r* from two repeat samples to three in Excel is challenging and generally requires adding additional columns and reapplying formulae.  This is much more amenable in a programming paradigm where formulae can be much more flexible and account for future changes.
 In addition, it's far easier to write and maintain functions under R or python that Excel.  The last significant change in VBA was around 2000.
 
 #### Numerical Accuracy
