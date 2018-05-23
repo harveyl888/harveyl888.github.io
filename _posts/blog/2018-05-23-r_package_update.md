@@ -17,6 +17,8 @@ library(plyr)
 df.all <- as.data.frame(installed.packages()[,c(1:4, 16)], stringsAsFactors = FALSE)
 df.split <- split.data.frame(df.all, df.all$LibPath)
 df.wide <- join_all(df.split, by = 'Package')
-names(df.wide) <- c('Package', paste0(rep(c('libpath_', 'version_', 'priority_', 'built_'), length(df.split)), seq(length(df.split))))
+names(df.wide) <- c('Package', paste0(rep(c('libpath_', 'version_', 'priority_', 'built_'), length(df.split)), rep(seq(length(df.split)), each = 4)))
+
+df.user <- df.wide[!is.na(df.wide$libpath_2),]
 
 ```
