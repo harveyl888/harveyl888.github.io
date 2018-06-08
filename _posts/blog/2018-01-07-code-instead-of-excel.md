@@ -27,7 +27,7 @@ A few favorite examples
 -  One in five papers published genetics papers from 2005-2015 (3600 papers, 18 journals) contain errors due to Excel autoformatting [Genome Biology, 2016, 17, 177](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7)
 
 #### Maintainability
-I work in Analytial Chemistry and often deal with assay data - essentially a block of data which could be summarized as *s* samples each run *r* times against *f* features.  Changing *r* from two repeat samples to three in Excel is challenging and generally requires adding additional columns and reapplying formulae.  This is much more amenable in a programming paradigm where formulae can be much more flexible and account for future changes.
+I work in Analytical Chemistry and often deal with assay data - essentially a block of data which could be summarized as *s* samples each run *r* times against *f* features.  Changing *r* from two repeat samples to three in Excel is challenging and generally requires adding additional columns and reapplying formulae.  This is much more amenable in a programming paradigm where formulae can be much more flexible and account for future changes.
 In addition, it's far easier to write and maintain functions under R or python that Excel.  The last significant change in VBA was around 2000.
 
 #### Numerical Accuracy
