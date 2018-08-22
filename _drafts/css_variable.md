@@ -11,7 +11,7 @@ ads: false
 
 # Method One - Does not work with IE
 
-CSS variables are a powerful way to make wholesale changes to the style throughout an entire document.  They are set using a custom notation `--variable_name` and accessed throughout the document using `var(--variable_name)`.  With a little javascript these variables can be used in Shiny apps and updated as needed.  The example below contains three files: a shiny app (app.R), the CSS styling (style.css) and the associated javascript functions which update the CSS variables (var\_change.css).  The CSS and javascript files are stored in the www folder.  This method works well under Chrome but does not work with Internet Explorer (css variables do not work under IE).  Later on in this post we'll see how to perform the same wholesale changes but with IE.
+CSS variables are a powerful way to make wholesale changes to the style throughout an entire document.  They are set using a custom notation `--variable_name` and accessed throughout the document using `var(--variable_name)`.  With a little javascript these variables can be used in Shiny apps and updated as needed.  The example below contains three files: a shiny app (app.R), the CSS styling (style.css) and the associated javascript functions which update the CSS variables (var\_change.js).  The CSS and javascript files are stored in the www folder.  This method works well under Chrome but does not work with Internet Explorer (css variables do not work under IE).  Later on in this post we'll see how to perform the same wholesale changes but with IE.
 
 ### app.R
 
