@@ -9,7 +9,7 @@ share: false
 ads: false
 ---
 
-This year I'm trying out slack as a platform for out fantasy football league.  It provides channels for banter, keeping track of transfers and, with the use of rss feeds, up to date information.  In addition I've set up a chaanel dedicated to injuries tied to an incoming webhook.  The injury channel works by running a small python code on a server via a weekly cron job.  The python code scrapes a site that lists current Premiership injuries and suspensions, reformats the output and then pushes it out to the slack channel.  This results in a simple solution that updates a channel weekly.
+This year I'm trying out slack as a platform for out fantasy football league.  It provides channels for banter, keeping track of transfers and, with the use of rss feeds, up to date information.  In addition I've set up a channel dedicated to injuries tied to an incoming webhook.  The injury channel works by running a small python code on a server via a weekly cron job.  The python code scrapes a site that lists current Premiership injuries and suspensions, reformats the output and then pushes it out to the slack channel.  This results in a simple solution that updates a channel weekly.
 
 ```python
 # -*- coding: utf-8 -*-
