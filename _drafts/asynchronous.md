@@ -11,7 +11,7 @@ ads: false
 
 I had been running a shiny app in which I could halt a long-running process.  The process would update the shiny app and constantly looked for an updated shiny variable to inform if a cancel button had been pressed.  The code had been adapted from a SO post at 
 [https://stackoverflow.com/questions/30587883/is-it-possible-to-stop-executing-of-r-code-inside-shiny-without-stopping-the-sh/34517844#34517844](https://stackoverflow.com/questions/30587883/is-it-possible-to-stop-executing-of-r-code-inside-shiny-without-stopping-the-sh/34517844#34517844).
-Unfortunately, utilized the httpuv::service function in a manner for which it was not designed.  At some point, when shiny and httpuv was updated, this functionality ceased to work.  Thanks to some help from Joe Cheng a similar functionality can be derived using an asynchronous function.  A working example is shown below.
+Unfortunately this utilized the httpuv::service function in a manner for which it was not designed.  At some point, when shiny and httpuv were updated, this functionality ceased to work.  Thanks to some help from Joe Cheng a similar functionality can be derived using an asynchronous function.  A working example is shown below.
 
 ```r
 library(shiny)
