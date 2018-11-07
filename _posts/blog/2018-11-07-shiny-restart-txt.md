@@ -1,7 +1,7 @@
 ---
 layout: article
-title: "restarting a shiny app"
-excerpt: "forcing a shiny app restart"
+title: "Restarting a Shiny App"
+excerpt: "Forcing a shiny app restart"
 categories: blog
 created: 2018-11-07
 comments: false
