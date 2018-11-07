@@ -1,9 +1,9 @@
 ---
 layout: article
-title: "datatable callback in shiny module"
-excerpt: "datatable callback in shiny module"
+title: "Datatable Callback in Shiny Module"
+excerpt: "Datatable callback in shiny module"
 categories: blog
-created: 2018-10-01
+created: 2018-10-11
 comments: false
 share: false
 ads: false
