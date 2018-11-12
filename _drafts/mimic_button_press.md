@@ -9,7 +9,7 @@ share: false
 ads: false
 ---
 
-Sometimes it's useful to mimic a button press in a shiny app when the Enter key is pressed, for example when entering a password.  This has been documented before and works well for most situations but fails when the button widget is housed within renderUI.  Here's an alternative that works wherever the password input and button are located.
+Sometimes it's useful to mimic a button press in a shiny app when the Enter key is pressed, for example when entering a password.  This has been [documented before](https://github.com/daattali/advanced-shiny/blob/master/proxy-click/app.R) and works well for most situations but fails when the button widget is housed within renderUI.  Here's an alternative that works wherever the password input and button are located.
 
 ```R
 
