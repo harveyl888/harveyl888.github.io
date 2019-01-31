@@ -13,6 +13,6 @@ RStudio Server is a fantastic IDE.  Amongst its numerous features is the STOP bu
 
 `ps aux |grep "rsession.*nm61135n"`
 
-![](/images/drafts/ps-grab.png)
+![](/images/post-images/2019-01-08-crashed-session/ps-grab.png)
 
 The output returns the process id along with the rsession identifier allowing the culprit to be shut down using the `kill` command.

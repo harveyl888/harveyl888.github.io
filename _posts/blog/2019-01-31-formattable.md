@@ -9,20 +9,20 @@ share: false
 ads: false
 ---
 
-Formattable is a powerful R library used to format tables.  There are many built-in functions which allow a user to style tables using color, bars ad icons.  Below is an example of how to color a data frame using information from a second data frame.  Average values are colored red if the RSD is greater than 0.15 and green if it is below.  
+Formattable is a powerful R library used to format tables.  There are many built-in functions which allow a user to style tables using color, bars ad icons.  In addition you can create your own custom formatters.  Below is an example of how to color a data frame using information from a second data frame.  Average values are colored red if the RSD is greater than 0.15 and green if it is below.  
 This was developed in order to represent a large table of data color-coded accordng to RSD so that the analyst could quickly identify potential sources of systematic error.
 
 ### table of data
 
-![](/images/drafts/table_avg.png)
+![](/images/post-images/2019-01-31-formattable/table_avg.png)
 
 ### table of RSDs
 
-![](/images/drafts/table_rsd.png)
+![](/images/post-images/2019-01-31-formattable/table_rsd.png)
 
 ### table of data color-coded according to RSDs
 
-![](/images/drafts/table_color.png)
+![](/images/post-images/2019-01-31-formattable/table_color.png)
 
 ### Code
 
