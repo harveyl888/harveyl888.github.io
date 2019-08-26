@@ -42,4 +42,4 @@ visNetwork(nodes = df.nodes ,edges = df.edges) %>%
 
 ```
 
-![](/images/drafts/visnetwork.png)
+![](/images/post-images/2019-03-15-visnetwork_continuous/visnetwork.png)
