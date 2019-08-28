@@ -26,12 +26,12 @@ So why use column identifiers from the table header instead of just splitting ta
 An additional issue arises because when the pdf is imported some unexpected formatting issues can arise, particularly with respect to unwanted or missing spaces.  To account for this when parsing the table we can nudge forward or back to identify spaces between values.  This can be seen in the alignment of line 3 of the table below (pdf vs parsed text).
 
 <figure>
-	<img src="/images/drafts/pdf_table_01.png">
+	<img src="/images/post-images/2019-08-26-extract_pdf/pdf_table_01.png">
 	<figcaption>PDF Version</figcaption>
 </figure>
 
 <figure>
-	<img src="/images/drafts/pdf_table_02.png">
+	<img src="/images/post-images/2019-08-26-extract_pdf/pdf_table_02.png">
 	<figcaption>Parsed Version</figcaption>
 </figure>
 
@@ -178,11 +178,11 @@ write.csv(df_all, 'table_out.csv', row.names = FALSE)
 #### Input File Example
 
 <figure>
-	<img src="/images/drafts/input_file.png">
+	<img src="/images/post-images/2019-08-26-extract_pdf/input_file.png">
 </figure>
 
 ### Output Table
 
 <figure>
-	<img src="/images/drafts/output_table.png">
+	<img src="/images/post-images/2019-08-26-extract_pdf/output_table.png">
 </figure>
