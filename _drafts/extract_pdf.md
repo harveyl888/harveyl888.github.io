@@ -21,7 +21,8 @@ The `pdftools` library is used to read in the PDF files.
 
 #### Unwanted or Missing spaces
 
-So why use column identifiers from the table header instead of just splitting table columns using a delimeter such as a tab?  Unfortunately tabular information is lost when the pdf is imported and any tab information is converted to space characters.  A space character column delimeter could be used if all columns are populated and the sample names did not contain spaces.  For these tables, however, the Type columns is not always populated and the name column can contain spaces.  Therefpre there is no way to be sure that we are accurately identifying the end of one column and beginning of another using delimeters.  
+So why use column identifiers from the table header instead of just splitting table columns using a delimeter such as a tab?  Unfortunately tabular information is lost when the pdf is imported and any tabs are converted into spaces.  A space character column delimeter could be used if all columns are populated and the sample names did not contain spaces.  For these tables, however, the *Type* column is not always populated and the *Name* column can contain spaces.  Therefore there is no way to be sure that we are accurately identifying the end of one column and beginning of another using delimeters.  
+
 An additional issue arises because when the pdf is imported some unexpected formatting issues can arise, particularly with respect to unwanted or missing spaces.  To account for this when parsing the table we can nudge forward or back to identify spaces between values.  This can be seen in the alignment of line 3 of the table below (pdf vs parsed text).
 
 <figure>
