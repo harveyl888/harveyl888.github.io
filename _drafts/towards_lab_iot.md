@@ -27,5 +27,128 @@ Each instrument can be controlled by a small controller.  The controller should 
 ### Software Solutions
 I chose to implement MQTT as a protocol.  It's a lightweight messaging protocol that runs over TCP/IP.  MQTT works by having clients publish messages through topics to a broker, which manages all the traffic.  Clients can also subscribe to any topics, receiving messages from the broker as they arrive.  This routes all messages through a central location as well as allowing clients to communicate with each other (via the broker).  For IoT data received from multiple sources with time being a key piece of metadata a time series database (in this case InfluxDB) is a suitable choice for data storage.  The data can then be displayed in real-time using grafana.
 
+### Test Sandbox
+I used virtualbox to test the concept.  Ultimately I created three ubuntu instances to mimic a server and two remote linux controllers.
 
+### Installing software
+
+#### Installing InfluxDB
+add the InfluxData repository
+```
+wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+source /etc/lsb-release
+echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+```
+install and start the InfluxDB service
+```
+sudo apt-get update && sudo apt-get install influxdb
+sudo service influxdb start
+```
+Configuration file is located under /etc/influxdb/influxdb.conf
+Most settings are commented out and take the default.  Apply the following changes for a simple system:
+```
+# remove data-usage reporting
+reporting-disabled = true
+
+[http]
+  # Determines whether HTTP endpoint is enabled.
+  enabled = true
+
+  # The bind address used by the HTTP service.
+  bind-address = ":8086"
+
+  # Determines whether user authentication is enabled over HTTP/HTTPS.
+  auth-enabled = false
+```
+Launch / relaunch with config file
+```
+influxd -config /etc/influxdb/influxdb.conf
+sudo service influxd restart -config /etc/influxdb/influxdb.conf
+```
+
+#### Testing InfluxDB
+
+```
+$ influx  -precision rfc3339  // starts the InfluxDB shell and shows time in rfc3339 format
+Connected to http://localhost:8086 version 1.2.0
+InfluxDB shell version: 1.2.0
+> create database demo        // Creates a new database
+> use demo
+Using database demo
+> insert mysensor1 value=0.51 // Insert new datapoints
+> insert mysensor1 value=0.53 // for the measurement
+> insert mysensor1 value=0.45 // "mysensor1"
+> select * from mysensor1     // Get the whole time series
+name: mysensor1                
+time                           value
+----                           -----
+2017-02-26T13:33:49.00279827Z  0.51
+2017-02-26T13:33:53.045762633Z 0.53
+2017-02-26T13:33:57.015427575Z 0.45
+```
+
+#### Installing grafana
+
+add repository
+```
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+```
+
+Install grafana
+```
+sudo apt-get update
+sudo apt-get install grafana
+```
+
+Start service
+```
+sudo service grafana-server start
+```
+
+To start at bootup:
+```
+sudo update-rc.d grafana-server defaults
+```
+
+The configuration file is found at /etc/grafana/grafana.ini and we’ll need to enable http protocol before use:
+```
+[server]
+# Protocol (http, https, socket)
+protocol = http
+
+# The ip address to bind to, empty will bind to all interfaces
+;http_addr =
+
+# The http port  to use
+http_port = 3000
+```
+
+Service can be relaunched with
+```
+sudo service grafana-server restart
+```
+
+#### Testing grafana
+
+Connect database
+Point browser to http://localhost:3000/
+A getting-started guide can be found at https://grafana.com/docs/guides/getting_started/
+
+log in (default = admin/admin) and click on “add data source”
+select InfluxDB as the source and then set the following parameters:
+```
+Name: InfluxDB
+HTTP URL: http://10.0.2.15:8086  (obtained from ifconfig command)
+Database name: demo
+```
+
+Create dashboard
+Dashboards can be built using “create dashboard”.
+Add a query that reads 
+```
+Query: sensordata
+FROM default mysensor1 WHERE
+SELECT field(value) mean()
+```
 
