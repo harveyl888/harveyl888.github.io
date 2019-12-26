@@ -1,7 +1,7 @@
 ---
 layout: article
-title: "Towards Lab IoT"
-excerpt: "Moving towards IoT in a lab"
+title: "Towards Lab IoT Part One"
+excerpt: "Moving towards IoT in a lab (part one - installing and command-line testing)"
 categories: blog
 created: 2019-10-16
 comments: false
