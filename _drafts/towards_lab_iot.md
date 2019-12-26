@@ -44,7 +44,7 @@ install and start the InfluxDB service
 sudo apt-get update && sudo apt-get install influxdb
 sudo service influxdb start
 ```
-Configuration file is located under /etc/influxdb/influxdb.conf
+Configuration file is located under `/etc/influxdb/influxdb.conf`
 Most settings are commented out and take the default.  Apply the following changes for a simple system:
 ```
 # remove data-usage reporting
@@ -111,7 +111,7 @@ To start at bootup:
 sudo update-rc.d grafana-server defaults
 ```
 
-The configuration file is found at /etc/grafana/grafana.ini and we’ll need to enable http protocol before use:
+The configuration file is found at `/etc/grafana/grafana.ini` and we’ll need to enable http protocol before use:
 ```
 [server]
 # Protocol (http, https, socket)
@@ -132,10 +132,10 @@ sudo service grafana-server restart
 #### Testing grafana
 
 Connect database
-Point browser to http://localhost:3000/
-A getting-started guide can be found at https://grafana.com/docs/guides/getting_started/
+Point browser to `http://localhost:3000/`
+A getting-started guide can be found at [https://grafana.com/docs/guides/getting_started/](https://grafana.com/docs/guides/getting_started/)
 
-log in (default = admin/admin) and click on “add data source”
+log in (default = admin/admin) and click on "add data source"
 select InfluxDB as the source and then set the following parameters:
 ```
 Name: InfluxDB
@@ -144,7 +144,7 @@ Database name: demo
 ```
 
 Create dashboard
-Dashboards can be built using “create dashboard”.
+Dashboards can be built using "create dashboard".
 Add a query that reads 
 ```
 Query: sensordata
@@ -152,3 +152,4 @@ FROM default mysensor1 WHERE
 SELECT field(value) mean()
 ```
 
+![](/images/drafts/grafana_example.png)
