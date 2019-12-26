@@ -269,3 +269,10 @@ if __name__ == '__main__':
     logging.info('Starting Broadcast from ' + INSTRUMENT_ID, extra = d)
     main()
 ```
+
+### Visualization
+
+Running all three codes leads to continuous output which updates every second.  *measurement1* and *measurement2* are stored in the InfluxDB under database **lab1** which can be visualized using grafana (default = localhost, port 3000).  
+*measurement1* and *measurement2* increment every second.  When *measurement1* reaches 50 it resets itself to a random value between 20 and 50 and resets *measurement2* to 20.
+
+![](/images/drafts/grafana_python_out.png)
