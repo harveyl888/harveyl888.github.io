@@ -33,13 +33,13 @@ I used virtualbox to test the concept.  Ultimately I created three ubuntu instan
 ### Installing software
 
 #### Installing InfluxDB
-add the InfluxData repository
+Add the InfluxData repository
 ```
 wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 source /etc/lsb-release
 echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
 ```
-install and start the InfluxDB service
+Install and start the InfluxDB service
 ```
 sudo apt-get update && sudo apt-get install influxdb
 sudo service influxdb start
@@ -89,7 +89,7 @@ time                           value
 
 #### Installing grafana
 
-add repository
+Add repository
 ```
 sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
 wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
@@ -151,5 +151,7 @@ Query: sensordata
 FROM default mysensor1 WHERE
 SELECT field(value) mean()
 ```
+
+The grafana time plot should show data from the Influx database, for example:
 
 ![](/images/drafts/grafana_example.png)
