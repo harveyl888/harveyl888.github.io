@@ -32,6 +32,8 @@ I used virtualbox to test the concept.  Ultimately I created three ubuntu instan
 
 ### Installing software
 
+InfluxDB and grafana were installed to the server instance and MQTT was installed on the server as well as the two other virtual machines.
+
 #### Installing InfluxDB
 Add the InfluxData repository
 ```
@@ -155,3 +157,40 @@ SELECT field(value) mean()
 The grafana time plot should show data from the Influx database, for example:
 
 ![](/images/drafts/grafana_example.png)
+
+#### Installing MQTT
+
+MQTT (MQ Telemetry Protocol) is a lightweight protocol for communication in IoT devices.  In order to utilize it we must install Mosquitto, a message broker that implements the MQTT protocol.  Mosquitto is lightweight and is suitable for use on all devices from low power single board computers to full servers.
+
+Mosquitto is available in the Ubuntu repositories:
+```
+sudo apt-get install mosquitto
+sudo apt-get install mosquitto-clients  # Mosquitto cmd line clients (use via bash)
+```
+
+Testing Mosquitto is running
+```
+service mosquitto status
+```
+
+#### Running a test communication between two servers (command line)
+
+In order to ensure that each VM has a separate IP address do the following:
+
+-  VirtualBox control Panel: File -> Preferences -> Network
+-  select NAT networks tab and create a new network called “NatNetwork”
+-  in each VM: Settings -> Network -> Attached to: change to “Nat Network” and select “NatNetwork” from the Name dropdown
+-  Restart all VMs
+
+The following lines will create a subscriber on *machine 1* which will listen for messages from *machine 2* which have a topic starting with *message* followed by any other sub-topic.  More details on how to use the protocol can be found at [https://mosquitto.org/](https://mosquitto.org/)
+
+**machine 1 (ip address = 10.0.2.15)**  
+`mosquitto_sub -h 10.0.2.15 -t 'message/+' &`  
+listens for message in background
+
+**machine 2 (ip address = 10.0.2.4)**  
+`mosquitto_pub -h 10.0.2.15 -t 'message/my_comp' -m 'Hi there'`  
+Publish message
+
+If all works well *machine 1* should display 'Hi there' each time the mosquitto\_pub command is run.
+
