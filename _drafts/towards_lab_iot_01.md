@@ -19,7 +19,7 @@ The final system should allow for the following:
 -  database to store measurements
 -  visualization to monitor data
 
-I settled on a few hardware and software solutions to put this into effect.
+I settled on a few hardware and software solutions to put this into effect.  Much of the MQTT and database development was inspired by several [thingsmatic blog entries](https://thingsmatic.com/2016/06/24/a-self-hosted-mqtt-environment-for-internet-of-things-part-1/)
 
 ### Hardware Solutions
 Each instrument can be controlled by a small controller.  The controller should be able to interface with the instrument and publish and receive data.  It should run background code that allows it to react to received data.  It should also communicate wirelessly via wifi and allow ssh communication.  Obvious choice is the Raspberry Pi ZeroW but we could also consider the Adafruit Feather HUZZAH ESP8266 (a little more challenging to add ssh).
