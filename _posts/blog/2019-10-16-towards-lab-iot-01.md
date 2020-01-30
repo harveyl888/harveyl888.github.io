@@ -156,7 +156,7 @@ SELECT field(value) mean()
 
 The grafana time plot should show data from the Influx database, for example:
 
-![](/images/drafts/grafana_example.png)
+![](/images/post-images/2019-10-16-lab_iot_01/grafana_example.png)
 
 #### Installing MQTT
 
